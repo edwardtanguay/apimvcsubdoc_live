@@ -5,7 +5,7 @@ GET {{url}}/simple_users
 content-type: application/json
 
 ### simple users CREATE
-POST {{url}}/simpleUsers/create
+POST {{url}}/simple_users/create
 content-type: application/json
 	
 {
@@ -14,16 +14,15 @@ content-type: application/json
 }
 
 ### simple users UPDATE
-PATCH {{url}}/simpleUsers/update/619e0fd0d36a01811ea3bf9f
+PATCH {{url}}/simple_users/update/619e56b9258e42a3f346e668 
 content-type: application/json
 	
 {
-	"firstName": "Edward",
 	"lastName": "Scissorhands"
 }
 
 ### simple users DELETE
-DELETE {{url}}/simpleUsers/delete/619e0fd0d36a01811ea3bf9f
+DELETE {{url}}/simple_users/delete/619e0fd0d36a01811ea3bfa1
 content-type: application/json
 
 ### nested users READ
