@@ -2,5 +2,5 @@ mongoimport --db test --collection simpleusers --type json --file simpleusers.js
 
 
 - refactoring
-	- save/create
-	- collection in schema
+	- .. save/create
+	- x collection in schema

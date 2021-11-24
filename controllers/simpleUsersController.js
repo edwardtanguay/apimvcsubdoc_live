@@ -5,8 +5,7 @@ export const getAllSimpleUsers = async () => {
 }
 
 export const createSimpleUser = async (simpleUserObj) => {
-	const simpleUser = new SimpleUsersModel(simpleUserObj);
-	return simpleUser.save();
+	return await SimpleUsersModel.create(simpleUserObj);
 }
 
 export const deleteSimpleUser = async (id) => {
