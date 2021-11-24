@@ -25,3 +25,65 @@ content-type: application/json
 ### simple users DELETE
 DELETE {{url}}/simpleUsers/delete/619e0fd0d36a01811ea3bf9f
 content-type: application/json
+
+### nested users READ
+GET {{url}}/nestedUsers
+content-type: application/json
+
+### nested users READ
+GET {{url}}/nestedUsers/emails
+content-type: application/json
+
+### nested users READ
+GET {{url}}/nestedUsers/accountHistory/619d7bb7017e9300920ffb78
+content-type: application/json
+
+### nested users CREATE
+POST {{url}}/nestedUsers/create
+content-type: application/json
+	
+{
+	"name" : "Stephanie Added",
+	"username" : "Brandyn_Reilly59",
+	"email" : "Tyshawn.Abshire@yahoo.com",
+	"address" : {
+		"street" : "Hill Parks",
+		"suite" : "Suite 582",
+		"city" : "Garfieldmouth",
+		"zipcode" : "21401-7727"
+	},
+	"phone" : "502-899-9440 x015",
+	"website" : "jessyca.org",
+	"company" : "Kshlerin, Wiza and Ferry",
+	"accountHistory" : [
+		{
+			"amount" : 333,
+			"date" : "2021-11-15T16:52:26.505+01:00",
+			"purchase" : "Fantastic Wooden Table"
+		},
+		{
+			"amount" : 665.01,
+			"date" : "2021-11-15T16:52:26.505+01:00",
+			"purchase" : "Tasty Soft Towels"
+		},
+		{
+			"amount" : 205.68,
+			"date" : "2021-11-15T16:52:26.505+01:00",
+			"purchase" : "Small Concrete Chair"
+		}
+	]
+}
+
+### nested users UPDATE
+PATCH {{url}}/nestedUsers/update/619d7bb7017e9300920ffbda
+content-type: application/json
+	
+{
+	"name": "Steven CHANGED",
+	"address.street": "changed street",
+	"accountHistory.2.amount": 999
+}
+
+### nested users DELETE
+POST {{url}}/nestedUsers/delete/619d7bb7017e9300920ffbda
+content-type: application/json
