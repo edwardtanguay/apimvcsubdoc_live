@@ -4,8 +4,11 @@ const simpleUsersSchema = mongoose.Schema({
 	firstName: String,
 	lastName: String
 },
-	{ versionKey: false });
+	{
+		versionKey: false,
+		collection: "simpleUsers"
+	});
 
-const SimpleUsersModel = mongoose.model("SimpleUser", simpleUsersSchema, "simpleUsers");
+const SimpleUsersModel = mongoose.model("SimpleUser", simpleUsersSchema );
 
 export default SimpleUsersModel;

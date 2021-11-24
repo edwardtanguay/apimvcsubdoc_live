@@ -19,8 +19,11 @@ const nestedUsersSchema = mongoose.Schema({
 		purchase: String
 	}]
 },
-	{ versionKey: false });
+	{
+		versionKey: false,
+		collection: "nestedUsers"
+	});
 
-const NestedUsersModel = mongoose.model("NestedUser", nestedUsersSchema, "nestedUsers" );
+const NestedUsersModel = mongoose.model("NestedUser", nestedUsersSchema);
 
 export default NestedUsersModel;
