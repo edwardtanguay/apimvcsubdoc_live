@@ -1,0 +1,27 @@
+@url = http://localhost:3035
+
+### simple users READ
+GET {{url}}/simpleUsers
+content-type: application/json
+
+### simple users CREATE
+POST {{url}}/simpleUsers/create
+content-type: application/json
+	
+{
+	"firstName": "Andre",
+	"lastName": "Hackerkrug"
+}
+
+### simple users UPDATE
+PATCH {{url}}/simpleUsers/update/619e0fd0d36a01811ea3bf9f
+content-type: application/json
+	
+{
+	"firstName": "Edward",
+	"lastName": "Scissorhands"
+}
+
+### simple users DELETE
+DELETE {{url}}/simpleUsers/delete/619e0fd0d36a01811ea3bf9f
+content-type: application/json
