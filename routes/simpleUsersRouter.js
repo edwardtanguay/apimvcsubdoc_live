@@ -3,14 +3,12 @@ import * as SimpleUsersController from '../controllers/simpleUsersController.js'
 
 const router = express.Router();
 
-// simple users: READ
 router.get('/', async (req, res) => {
 	res.json({
 		simpleUsers: await SimpleUsersController.getAllSimpleUsers()
 	});
 });
 
-// simple users: CREATE
 router.post('/create', async (req, res) => {
 	const simpleUserObj = req.body;
 	const result = await SimpleUsersController.createSimpleUser(simpleUserObj);
@@ -19,7 +17,6 @@ router.post('/create', async (req, res) => {
 	});
 });
 
-// simple users: UPDATE
 router.patch('/update/:id', async (req, res) => {
 	const id = req.params.id;
 	const updateFields = req.body
@@ -29,7 +26,6 @@ router.patch('/update/:id', async (req, res) => {
 	});
 });
 
-// simple users: DELETE
 router.delete('/delete/:id', async (req, res) => {
 	const id = req.params.id;
 	const result = await SimpleUsersController.deleteSimpleUser(id);

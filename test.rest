@@ -26,19 +26,19 @@ DELETE {{url}}/simple_users/delete/619e0fd0d36a01811ea3bfa1
 content-type: application/json
 
 ### nested users READ
-GET {{url}}/nestedUsers
+GET {{url}}/nested_users
 content-type: application/json
 
 ### nested users READ
-GET {{url}}/nestedUsers/emails
+GET {{url}}/nested_users/emails
 content-type: application/json
 
 ### nested users READ
-GET {{url}}/nestedUsers/accountHistory/619d7bb7017e9300920ffb78
+GET {{url}}/nested_users/accountHistory/619d7bb7017e9300920ffb78
 content-type: application/json
 
 ### nested users CREATE
-POST {{url}}/nestedUsers/create
+POST {{url}}/nested_users/create
 content-type: application/json
 	
 {
@@ -74,7 +74,7 @@ content-type: application/json
 }
 
 ### nested users CREATE WITH VALIDATION ERROR
-POST {{url}}/nestedUsers/create
+POST {{url}}/nested_users/create
 content-type: application/json
 	
 {
@@ -110,7 +110,7 @@ content-type: application/json
 }
 
 ### nested users UPDATE
-PATCH {{url}}/nestedUsers/update/619d7bb7017e9300920ffbda
+PATCH {{url}}/nested_users/update/619d7bb7017e9300920ffb78
 content-type: application/json
 	
 {
@@ -120,5 +120,5 @@ content-type: application/json
 }
 
 ### nested users DELETE
-POST {{url}}/nestedUsers/delete/619d7bb7017e9300920ffbda
+POST {{url}}/nested_users/delete/619d7bb7017e9300920ffbda
 content-type: application/json
